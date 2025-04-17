@@ -1,0 +1,281 @@
+{
+	"id": "2423522a-8917-4663-80a0-c35a0af9725d",
+	"name": "PokeAPI Tests",
+	"timestamp": "2025-04-16T00:39:38.333Z",
+	"collection_id": "33643171-5bab9214-4bbc-4af1-a8df-29943adfeb79",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 14,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-04-16T00:39:36.047Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "64315890-bf31-4637-965e-e52ff3058bde",
+			"name": "test_post_valid_ids",
+			"url": "http://localhost:8000/pokemon",
+			"time": 318,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Response contains excel_base64": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains excel_base64": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				318
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Response contains excel_base64": true
+				}
+			]
+		},
+		{
+			"id": "ee1adb0b-8b05-41de-a2ef-96a0f60ecbd6",
+			"name": "test_post_invalid_id",
+			"url": "http://localhost:8000/pokemon",
+			"time": 138,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Response contains excel_base64": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains excel_base64": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				138
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Response contains excel_base64": true
+				}
+			]
+		},
+		{
+			"id": "1a1cf7eb-39c1-43b6-aa6f-c67ebeb20985",
+			"name": "test_post_empty_list",
+			"url": "http://localhost:8000/pokemon",
+			"time": 475,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Response contains excel_base64": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains excel_base64": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				475
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Response contains excel_base64": true
+				}
+			]
+		},
+		{
+			"id": "0921179d-0efa-4fe7-ba4d-0e8e2574920e",
+			"name": "test_post_negative_id",
+			"url": "http://localhost:8000/pokemon",
+			"time": 165,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Response contains excel_base64": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains excel_base64": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				165
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Response contains excel_base64": true
+				}
+			]
+		},
+		{
+			"id": "1c00c3b3-5f66-4b79-aac9-1fa3908bdc7c",
+			"name": "test_post_not_all_valid_ids",
+			"url": "http://localhost:8000/pokemon",
+			"time": 454,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Response contains excel_base64": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains excel_base64": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				454
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Response contains excel_base64": true
+				}
+			]
+		},
+		{
+			"id": "4a76929a-0f59-4bc9-b557-cf327d248639",
+			"name": "test_post_decimal_id",
+			"url": "http://localhost:8000/pokemon",
+			"time": 145,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Response contains excel_base64": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains excel_base64": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				145
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Response contains excel_base64": true
+				}
+			]
+		},
+		{
+			"id": "b1b806ec-b4c2-4476-aa43-c44907b51cc4",
+			"name": "test_post_invalid_type",
+			"url": "http://localhost:8000/pokemon",
+			"time": 155,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status is 200": true,
+				"Response contains excel_base64": true
+			},
+			"testPassFailCounts": {
+				"Status is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains excel_base64": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				155
+			],
+			"allTests": [
+				{
+					"Status is 200": true,
+					"Response contains excel_base64": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1850,
+	"collection": {
+		"requests": [
+			{
+				"id": "64315890-bf31-4637-965e-e52ff3058bde",
+				"method": "POST"
+			},
+			{
+				"id": "ee1adb0b-8b05-41de-a2ef-96a0f60ecbd6",
+				"method": "POST"
+			},
+			{
+				"id": "1a1cf7eb-39c1-43b6-aa6f-c67ebeb20985",
+				"method": "POST"
+			},
+			{
+				"id": "0921179d-0efa-4fe7-ba4d-0e8e2574920e",
+				"method": "POST"
+			},
+			{
+				"id": "1c00c3b3-5f66-4b79-aac9-1fa3908bdc7c",
+				"method": "POST"
+			},
+			{
+				"id": "4a76929a-0f59-4bc9-b557-cf327d248639",
+				"method": "POST"
+			},
+			{
+				"id": "b1b806ec-b4c2-4476-aa43-c44907b51cc4",
+				"method": "POST"
+			}
+		]
+	}
+}

@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "5bab9214-4bbc-4af1-a8df-29943adfeb79",
+		"name": "PokeAPI Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33643171"
+	},
+	"item": [
+		{
+			"name": "test_post_valid_ids",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains excel_base64\", function () {\r",
+							"    pm.response.to.have.jsonBody(\"excel_base64\");\r",
+							"    \r",
+							"    var data = pm.response.json();\r",
+							"    var decoded = atob(data.excel_base64);\r",
+							"    pm.expect(decoded.substring(0, 4)).to.eql('PK\\x03\\x04');  // Verifica assinatura de arquivo .xlsx\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"json\": [1, 4, 7],\r\n    \"filename\": \"test_output.xlsx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test_post_invalid_id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains excel_base64\", function () {\r",
+							"    pm.response.to.have.jsonBody(\"excel_base64\");\r",
+							"    \r",
+							"    var data = pm.response.json();\r",
+							"    var decoded = atob(data.excel_base64);\r",
+							"    pm.expect(decoded.substring(0, 4)).to.eql('PK\\x03\\x04');  // Verifica assinatura de arquivo .xlsx\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"json\": [1, 4, 7],\r\n    \"filename\": \"test_output.xlsx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test_post_empty_list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains excel_base64\", function () {\r",
+							"    pm.response.to.have.jsonBody(\"excel_base64\");\r",
+							"    \r",
+							"    var data = pm.response.json();\r",
+							"    var decoded = atob(data.excel_base64);\r",
+							"    pm.expect(decoded.substring(0, 4)).to.eql('PK\\x03\\x04');  // Verifica assinatura de arquivo .xlsx\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"json\": [1, 4, 7],\r\n    \"filename\": \"test_output.xlsx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test_post_negative_id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains excel_base64\", function () {\r",
+							"    pm.response.to.have.jsonBody(\"excel_base64\");\r",
+							"    \r",
+							"    var data = pm.response.json();\r",
+							"    var decoded = atob(data.excel_base64);\r",
+							"    pm.expect(decoded.substring(0, 4)).to.eql('PK\\x03\\x04');  // Verifica assinatura de arquivo .xlsx\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"json\": [1, 4, 7],\r\n    \"filename\": \"test_output.xlsx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test_post_not_all_valid_ids",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains excel_base64\", function () {\r",
+							"    pm.response.to.have.jsonBody(\"excel_base64\");\r",
+							"    \r",
+							"    var data = pm.response.json();\r",
+							"    var decoded = atob(data.excel_base64);\r",
+							"    pm.expect(decoded.substring(0, 4)).to.eql('PK\\x03\\x04');  // Verifica assinatura de arquivo .xlsx\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"json\": [1, 4, 7],\r\n    \"filename\": \"test_output.xlsx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test_post_decimal_id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains excel_base64\", function () {\r",
+							"    pm.response.to.have.jsonBody(\"excel_base64\");\r",
+							"    \r",
+							"    var data = pm.response.json();\r",
+							"    var decoded = atob(data.excel_base64);\r",
+							"    pm.expect(decoded.substring(0, 4)).to.eql('PK\\x03\\x04');  // Verifica assinatura de arquivo .xlsx\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"json\": [1, 4, 7],\r\n    \"filename\": \"test_output.xlsx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test_post_invalid_type",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response contains excel_base64\", function () {\r",
+							"    pm.response.to.have.jsonBody(\"excel_base64\");\r",
+							"    \r",
+							"    var data = pm.response.json();\r",
+							"    var decoded = atob(data.excel_base64);\r",
+							"    pm.expect(decoded.substring(0, 4)).to.eql('PK\\x03\\x04');  // Verifica assinatura de arquivo .xlsx\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"json\": [1, 4, 7],\r\n    \"filename\": \"test_output.xlsx\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
